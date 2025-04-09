@@ -1,0 +1,15 @@
+{
+  "originHash" : "fdc23b8ff4daad3bc592449cdbb87ff7120eb9cbef2b6087f0d62e3fe4285748",
+  "pins" : [
+    {
+      "identity" : "elementary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sliemeobn/elementary",
+      "state" : {
+        "revision" : "5e6a7b5a5d5974e90f679ce4570e1dcfb011734d",
+        "version" : "0.5.2"
+      }
+    }
+  ],
+  "version" : 3
+}
