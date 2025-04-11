@@ -17,7 +17,7 @@ public func Block<Tag: HTMLTagDefinition, Wrapped: HTML>(
 public func Text<Tag: HTMLTagDefinition>(
     _ text: String,
     _ styles: ElementaryStyle...,
-    tag: Tag.Type = HTMLTag.span.self,
+    tag: Tag.Type = HTMLTag.span.self
 ) -> HTMLElement<Tag, HTMLText> where Tag: HTMLTrait.Paired {
     HTMLElement(
         .class(styles.classNames()),
