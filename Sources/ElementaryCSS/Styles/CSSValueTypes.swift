@@ -122,7 +122,7 @@ public struct CSSFlexDirection: Sendable, RawRepresentable {
     public static let columnReverse = Self(rawValue: "column-reverse")
 }
 
-public struct CSSFontWeight: Sendable, RawRepresentable, ExpressibleByIntegerLiteral, ExpressibleByStringLiteral {
+public struct CSSFontWeight: Sendable, RawRepresentable, ExpressibleByIntegerLiteral, ExpressibleByStringInterpolation {
     public let rawValue: String
 
     public init(rawValue: String) {
@@ -133,7 +133,7 @@ public struct CSSFontWeight: Sendable, RawRepresentable, ExpressibleByIntegerLit
         self.rawValue = String(value)
     }
 
-    public init(stringLiteral value: StringLiteralType) {
+    public init(stringLiteral value: String) {
         self.rawValue = value
     }
 
@@ -275,4 +275,16 @@ public struct CSSFontFamily: Sendable, RawRepresentable, ExpressibleByStringInte
     public static let uiSerif = Self("ui-serif")
     public static let uiMonospace = Self("ui-monospace")
     public static let uiRounded = Self("ui-rounded")
+}
+
+public struct CSSFontSize: Sendable, RawRepresentable {
+    public let rawValue: String
+
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+
+    public init(_ length: CSSLength) {
+        self.rawValue = length.rawValue
+    }
 }

@@ -1,7 +1,7 @@
 import Elementary
 
 @inlinable
-public func FlewRow<Tag: HTMLTagDefinition, Wrapped: HTML>(
+public func FlexRow<Tag: HTMLTagDefinition, Wrapped: HTML>(
     justify: CSSJustifyContent? = nil,
     align: CSSAlignItems? = nil,
     gap: CSSLength? = nil,

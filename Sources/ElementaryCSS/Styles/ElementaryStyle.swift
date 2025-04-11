@@ -166,6 +166,9 @@ extension ElementaryStyle {
     public static func fontSize(_ value: CSSLength) -> Self {
         Self(property: .fontSize, value: value)
     }
+    public static func fontSize(_ value: CSSFontSize) -> Self {
+        Self(property: .fontSize, value: value)
+    }
     public static func fontFamily(_ value: CSSFontFamily) -> Self {
         Self(property: .fontFamily, value: value)
     }
