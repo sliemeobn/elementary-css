@@ -1,0 +1,33 @@
+name: Build Examples
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.swift"
+      - "**.yml"
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: ./Examples/StaticExample
+
+jobs:
+  linux-examples:
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        image: ["swift:6.0", "swift:6.1"]
+
+    container:
+      image: ${{ matrix.image }}
+
+    name: Build Examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: ./build.sh
