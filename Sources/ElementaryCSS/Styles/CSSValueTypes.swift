@@ -291,3 +291,59 @@ public struct CSSFontSize: Sendable, RawRepresentable {
         self.rawValue = length.rawValue
     }
 }
+
+public struct CSSOverflow: Sendable, RawRepresentable {
+    public let rawValue: String
+
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+
+    public static let visible = Self(rawValue: "visible")
+    public static let hidden = Self(rawValue: "hidden")
+    public static let clip = Self(rawValue: "clip")
+    public static let scroll = Self(rawValue: "scroll")
+    public static let auto = Self(rawValue: "auto")
+}
+
+public struct CSSTransformOrigin: Sendable, RawRepresentable, ExpressibleByStringInterpolation {
+    public let rawValue: String
+
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+
+    public init(stringLiteral value: String) {
+        self.rawValue = value
+    }
+
+    public static let center = Self(rawValue: "center")
+    public static let topLeft = Self(rawValue: "top left")
+}
+
+//transform
+public struct CSSTransform: Sendable, RawRepresentable, ExpressibleByStringInterpolation {
+    public let rawValue: String
+
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+
+    public init(stringLiteral value: String) {
+        self.rawValue = value
+    }
+
+    public static let none = Self(rawValue: "none")
+
+    public static func translate(_ x: CSSLength, _ y: CSSLength) -> Self {
+        Self("translate(\(x.rawValue),\(y.rawValue))")
+    }
+
+    public static func rotate(_ degrees: Double) -> Self {
+        Self("rotate(\(degrees)deg)")
+    }
+
+    public static func scale(_ x: Double, _ y: Double) -> Self {
+        Self("scale(\(x),\(y))")
+    }
+}

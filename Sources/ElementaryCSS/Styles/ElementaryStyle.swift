@@ -132,9 +132,11 @@ extension ElementaryStyle {
     public static func gap(_ value: CSSLength) -> Self {
         Self(property: .gap, value: value)
     }
-
     public static func flex(_ value: CSSFlex) -> Self {
         Self(property: .flex, value: value)
+    }
+    public static func overflow(_ value: CSSOverflow) -> Self {
+        Self(property: .overflow, value: value)
     }
 
     // Positioning
@@ -198,8 +200,11 @@ extension ElementaryStyle {
     public static func opacity(_ value: Double) -> Self {
         Self(property: .opacity, value: "/(value)")
     }
-    public static func transform(_ value: String) -> Self {
+    public static func transform(_ value: CSSTransform) -> Self {
         Self(property: .transform, value: value)
+    }
+    public static func transformOrigin(_ value: CSSTransformOrigin) -> Self {
+        Self(property: .transformOrigin, value: value)
     }
     public static func transition(_ value: String) -> Self {
         Self(property: .transition, value: value)

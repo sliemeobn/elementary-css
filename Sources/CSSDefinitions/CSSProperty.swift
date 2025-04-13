@@ -47,10 +47,11 @@ package extension CSSProperty {
     static let alignItems = CSSProperty(name: "align-items", variable: "ai", defaultValue: "normal")
     static let alignContent = CSSProperty(name: "align-content", variable: "ac", defaultValue: "normal")
     static let gap = CSSProperty(name: "gap", variable: "g", defaultValue: "0")
+    static let overflow = CSSProperty(name: "overflow", variable: "ov", defaultValue: "visible")
 
     // Positioning
-    static let position = CSSProperty(name: "position", variable: "pos", defaultValue: "")
-    static let inset = CSSProperty(name: "inset", variable: "inset", defaultValue: "")
+    static let position = CSSProperty(name: "position", variable: "pn", defaultValue: "")
+    static let inset = CSSProperty(name: "inset", variable: "it", defaultValue: "")
 
     // Typography
     static let color = CSSProperty(name: "color", variable: "c", defaultValue: "inherit")
@@ -68,8 +69,9 @@ package extension CSSProperty {
 
     // Effects
     static let opacity = CSSProperty(name: "opacity", variable: "o", defaultValue: "1")
-    static let transform = CSSProperty(name: "transform", variable: "t", defaultValue: "none")
-    static let transition = CSSProperty(name: "transition", variable: "tr", defaultValue: "none")
+    static let transform = CSSProperty(name: "transform", variable: "tm", defaultValue: "none")
+    static let transformOrigin = CSSProperty(name: "transform-origin", variable: "tmo", defaultValue: "center")
+    static let transition = CSSProperty(name: "transition", variable: "tn", defaultValue: "none")
 }
 
 package extension CSSProperty {
