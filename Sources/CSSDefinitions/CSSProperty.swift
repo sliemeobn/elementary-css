@@ -87,7 +87,7 @@ package extension CSSProperty {
             height, width, minHeight, minWidth, maxWidth, maxHeight,
 
             // Layout
-            display, flexFlow, flex, justifyContent, alignItems, alignContent, gap,
+            display, flexFlow, flex, justifyContent, alignItems, alignContent, gap, overflow,
 
             // Positioning
             position, inset,
@@ -98,7 +98,7 @@ package extension CSSProperty {
             whiteSpace, textOverflow, textShadow,
 
             // Effects
-            opacity, transform, transition,
+            opacity, transform, transformOrigin, transition,
         ]
     }
 }
