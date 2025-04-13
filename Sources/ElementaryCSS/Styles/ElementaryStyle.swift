@@ -198,7 +198,7 @@ extension ElementaryStyle {
 
     // Effects
     public static func opacity(_ value: Double) -> Self {
-        Self(property: .opacity, value: "/(value)")
+        Self(property: .opacity, value: "\(value)")
     }
     public static func transform(_ value: CSSTransform) -> Self {
         Self(property: .transform, value: value)
